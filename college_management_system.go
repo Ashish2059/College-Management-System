@@ -129,8 +129,7 @@ invalidInput:
 	fmt.Println("Press 2: See Student Details")
 	fmt.Println("Press 3: Update Details of Student ")
 	fmt.Println("Press 4: Remove Student Record")
-	fmt.Println("press 5: Send Notice for Student")
-	fmt.Println("Press 6: Logout")
+	fmt.Println("Press 5: Logout")
 	var inp2 int
 	fmt.Println("Enter your choice:")
 	fmt.Scanln(&inp2)
@@ -630,9 +629,9 @@ A:
 	if counte >= 3 {
 		fmt.Printf("\n\n")
 		fmt.Println("+--------------------------------------------------------------------------------+")
-		fmt.Println("| You have been banned for 5 second from login because of multiple incorrect sid |")
+		fmt.Println("| You have been banned for 30 second from login because of multiple incorrect sid |")
 		fmt.Println("+--------------------------------------------------------------------------------+")
-		time.Sleep(5 * time.Second)
+		time.Sleep(30 * time.Second)
 	C:
 		fmt.Printf("Press 'e' to go back to menu! ")
 		var ab string
@@ -676,9 +675,9 @@ A:
 				if count >= 3 {
 					fmt.Printf("\n\n")
 					fmt.Println("+------------------------------------------------------------------------------------------+")
-					fmt.Println("| You have been banned for 5 second from login because of multiple incorrect login attempt |")
+					fmt.Println("| You have been banned for 1 minute from login because of multiple incorrect login attempt |")
 					fmt.Println("+------------------------------------------------------------------------------------------+")
-					time.Sleep(5 * time.Second)
+					time.Sleep(60 * time.Second)
 					clearScreen()
 					secondScreen()
 				}
@@ -748,7 +747,7 @@ A:
 			fmt.Println("\t Faculty         : ", g.faculty)
 			fmt.Println("\t Email           : ", g.email)
 			fmt.Println("\t Phone No.       : ", g.phNo)
-			fmt.Println("Created Date       : ", g.create_at)
+			fmt.Println("\tCreated Date     : ", g.create_at)
 			fmt.Printf("\n\n")
 			fmt.Printf("\n\n")
 			var inp string
